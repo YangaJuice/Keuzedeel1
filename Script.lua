@@ -47,8 +47,20 @@ function story(aName)
 		CLS();
 		setBackground("Background4.png")
 		createTextfield(" Epstein: Hey girlie, let me touch you.")
+		createButton("dead", "Let him touch you.")
+		createButton("playground", "Go Back!!!");
+	end
+	if(aName == "lefttunnel") then
+		playSound("footstep.wav")
+		CLS();
+		setBackground("Background4.png")
+		createTextfield(" Epstein: Hey girlie, let me touch you.")
 		createButton("exit", "Let him touch you.")
 		createButton("playground", "Go Back!!!");
+	end	if(aName == "dead") then
+		playMusic("Prowler.wav")
+		CLS();
+		setBackground("Death.png")
 	end
 
 	if(aName == "exit") then
