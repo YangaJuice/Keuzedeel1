@@ -17,7 +17,7 @@ function story(aName)
 		setBackground("Background1.png")
 		createTextfield("It is 4 A.M. Ahead of you is a McDonalds. What should I do?")	
 		createButton("entrance", "Go inside the McDonalds.")
-		createButton("exit", "Get back home, you fat piece of shit.")
+		createButton("dead", "Get back home, you fat piece of shit.")
 	end
 	if(aName == "entrance") then
 		if(entered == false) then
@@ -31,7 +31,7 @@ function story(aName)
 		createTextfield("You walked inside the McDonalds. Where do you want to go?")
 		createButton("playground", "Go to the Playground.")
 		createButton("cashier", "Go to the Cashier.")
-		createButton("toilet", "Go up the Toilet.");
+		createButton("toilet", "Go up the Toilet (Don't do it please).");
 	end
 	if(aName == "playground") then
 		playSound("footstep.wav")
@@ -53,16 +53,73 @@ function story(aName)
 	if(aName == "lefttunnel") then
 		playSound("footstep.wav")
 		CLS();
-		setBackground("Background4.png")
-		createTextfield(" Epstein: Hey girlie, let me touch you.")
-		createButton("exit", "Let him touch you.")
-		createButton("playground", "Go Back!!!");
-	end	if(aName == "dead") then
+		setBackground("Background5.png")
+		createTextfield(" Smiley: Hey, come here often?.")
+		createButton("touch", "Touch him.")
+		createButton("playground", "Go Back.");
+	end	
+	if(aName == "touch") then
+		playMusic("Goku.wav")
+		playSound("Fire.wav")
+		CLS();
+		setBackground("Background6.png")
+		createTextfield(" Smiley: WHAT ARE YOU TOUCHING ME FOR?!")
+		createButton("run", "Run away!")
+		createButton("shooting", "Shoot him!");
+	end	
+	if(aName == "run") then
+		playSound("Shoot.wav")
+		CLS();
+		setBackground("Background10.png")
+		createTextfield("As you try and run away, the smiley shot you to your death.")
+		createButton("dead", "Bleed to death.");
+	end	
+	if(aName == "shooting") then
+		playMusic("finalvictory.wav")
+		playSound("Shoot.wav")
+		CLS();
+		setBackground("Background11.png")
+		createTextfield("(Ending 2/3) You killed the smiley as he's bleeding to death.")
+		createButton("exit", "Leave.")
+	end	
+	if(aName == "cashier") then
+		playSound("footstep.wav")
+		CLS();
+		setBackground("Background7.png")
+		createTextfield("Cashier: Can I help you with something?")
+		createButton("shoot", "Shoot the Cashier.")
+		createButton("burger", "Order a barbeque bacon burger.")
+		createButton("entrance", "Go back.");
+	end
+		if(aName == "shoot") then
+			playMusic("shocking.wav")
+			playSound("Shoot.wav")
+			CLS();
+			setBackground("Background8.png")
+			createTextfield("Crowd: OHHHHH HE HAS A GUN!")
+			createButton("dead", "Shoot yourself.");
+	end
+	if(aName == "burger") then
+		playMusic("finalvictory.wav")
+		playSound("bbq.wav")
+		CLS();
+		setBackground("Background9.png")
+		createTextfield("(Ending 1/3) - Enjoy the meal")
+		createButton("exit", "Take your burger and leave")
+	end
+	if(aName == "toilet") then
+		playMusic("skibidi.wav")
+		CLS();
+		setBackground("Background12.png")
+		createTextfield("(Ending 3/3) - Skibidi toilet")
+		createButton("exit", "skibidi toilet")
+	end
+	
+	if(aName == "dead") then
 		playMusic("Prowler.wav")
 		CLS();
 		setBackground("Death.png")
 	end
-
 	if(aName == "exit") then
 		exitGame();
 	end
